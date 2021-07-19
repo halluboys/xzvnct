@@ -279,7 +279,7 @@ wget -O port-vless "https://raw.githubusercontent.com/halluboys/xzvnct/main/port
 wget -O wbmn "https://raw.githubusercontent.com/halluboys/xzvnct/main/webmin.sh"
 wget -O xp "https://raw.githubusercontent.com/halluboys/xzvnct/main/xp.sh"
 wget -O kernel-updt "https://raw.githubusercontent.com/halluboys/xzvnct/main/kernel-update.sh"
-wget -o bbr "https://raw.githubusercontent.com/halluboys/xzvnct/main/bbr.sh"
+wget -O bbr "https://raw.githubusercontent.com/halluboys/xzvnct/main/bbr.sh"
 chmod +x add-host
 chmod +x menu
 chmod +x usernew
