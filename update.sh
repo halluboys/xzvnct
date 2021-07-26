@@ -48,7 +48,7 @@ wget -O update "https://raw.githubusercontent.com/halluboys/xzvnct/main/update.s
 wget -O strt "https://raw.githubusercontent.com/halluboys/xzvnct/main/strt.sh"
 wget -O swap "https://raw.githubusercontent.com/halluboys/xzvnct/main/swapkvm.sh"
 wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/menu.sh"
-wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/v2raay.sh"
+wget -O v2raay "https://raw.githubusercontent.com/halluboys/xzvnct/main/v2raay.sh"
 chmod +x add-cfd
 chmod +x add-cfh
 chmod +x add-cff
