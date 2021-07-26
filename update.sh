@@ -17,7 +17,6 @@ echo "Start Update"
 cd /usr/bin
 wget -O bannerku "https://raw.githubusercontent.com/halluboys/xzvnct/main/bannerku"
 
-wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/menu.sh"
 
 wget -O update "https://raw.githubusercontent.com/halluboys/xzvnct/main/update.sh"
 wget -O strt "https://raw.githubusercontent.com/halluboys/xzvnct/main/strt.sh"
@@ -34,6 +33,8 @@ wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/wgr.sh"
 wget -O cfd "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfd.sh"
 wget -O cff "https://raw.githubusercontent.com/halluboys/xzvnct/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfh.sh"
+wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/menu.sh"
+
 
 chmod +x bannerku
 chmod +x cfd
