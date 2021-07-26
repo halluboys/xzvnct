@@ -26,7 +26,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e "   \e[032;1mTime:\e[0m $WKT"
 	echo -e "   \e[033;1mIPVPS:\e[0m $IPVPS"
 echo -e  ""
-echo -e  "   -------------------------MENU OPTIONS------------------------" | lolcat
+echo -e  "   -------------------------MENU OPTIONS------------------------" |
 echo -e   "   1\e[1;33m)\e[m SSH & OpenVPN Menu"
 echo -e   "   2\e[1;33m)\e[m Panel Wireguard "
 echo -e   "   3\e[1;33m)\e[m Panel L2TP & PPTP Account"
@@ -35,9 +35,9 @@ echo -e   "   5\e[1;33m)\e[m Panel SSR & SS Account"
 echo -e   "   6\e[1;33m)\e[m Panel V2Ray"
 echo -e   "   7\e[1;33m)\e[m Panel VLess"
 echo -e   "   8\e[1;33m)\e[m Panel TRojan"
-echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
-echo -e   "                             SYSTEM MENU\e[m" | lolcat 
-echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
+echo -e   "  \e[1;32m------------------------------------------------------------\e[m" |
+echo -e   "                             SYSTEM MENU\e[m" |
+echo -e   "  \e[1;32m------------------------------------------------------------\e[m" |
 echo -e   "   9\e[1;33m)\e[m   Add Subdomain Host For VPS"
 echo -e   "   10\e[1;33m)\e[m  Renew Certificate V2RAY"
 echo -e   "   11\e[1;33m)\e[m  Change Port All Account"
@@ -57,9 +57,9 @@ echo -e   "   24\e[1;33m)\e[m  Cloudflare Add-Ons"
 echo -e   "   25\e[1;33m)\e[m  Pointing BUG"
 echo -e   "   26\e[1;33m)\e[m  Clear log"
 echo -e   "   27\e[1;33m)\e[m  Auto Reboot"
-echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
-echo -e   "   x)   Exit" | lolcat
-echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
+echo -e   "  \e[1;32m------------------------------------------------------------\e[m" |
+echo -e   "   x)   Exit" |
+echo -e   "  \e[1;32m------------------------------------------------------------\e[m" |
 echo -e   ""
 read -p "     Select From Options [1-8 or x] :  " menu
 echo -e   ""
