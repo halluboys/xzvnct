@@ -76,7 +76,7 @@ chmod +x wgr
 chmod +x ssssr
 chmod +x ssh
 chmod +x l2tp
-chmod +x menu
+
 chmod +x add-host
 chmod +x usernew
 chmod +x trial
@@ -108,7 +108,7 @@ chmod +x xp
 chmod +x update
 chmod +x strt
 chmod +x swap
-
+chmod +x menu
 wget -O /usr/bin/ssr https://raw.githubusercontent.com/halluboys/xzvnct/main/ssrmu.sh && chmod +x /usr/bin/ssr
 wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/halluboys/xzvnct/main/add-ssr.sh && chmod +x /usr/bin/add-ssr
 wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/halluboys/xzvnct/main/del-ssr.sh && chmod +x /usr/bin/del-ssr
