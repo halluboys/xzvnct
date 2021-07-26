@@ -4,7 +4,6 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-source /root/mail.conf
 DOMAIN=xzvnct.my.id
 CF_ID=hammysayang@gmail.com
 CF_KEY=4f080bfcf8bbcdff1578104c1c8b6f8e8374c
