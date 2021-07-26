@@ -60,9 +60,9 @@ wget -O cfd "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfd.sh"
 wget -O cff "https://raw.githubusercontent.com/halluboys/xzvnct/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfh.sh"
 wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/menu.sh"
-chmod +x add-cfd
-chmod +x add-cfh
-chmod +x add-cff
+chmod +x cfd
+chmod +x cfh
+chmod +x cff
 chmod +x add-host
 chmod +x usernew
 chmod +x trial
