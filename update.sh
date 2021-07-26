@@ -48,6 +48,7 @@ wget -O update "https://raw.githubusercontent.com/halluboys/xzvnct/main/update.s
 wget -O strt "https://raw.githubusercontent.com/halluboys/xzvnct/main/strt.sh"
 wget -O swap "https://raw.githubusercontent.com/halluboys/xzvnct/main/swapkvm.sh"
 wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/menu.sh"
+wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/v2raay.sh"
 chmod +x add-cfd
 chmod +x add-cfh
 chmod +x add-cff
@@ -83,6 +84,7 @@ chmod +x update
 chmod +x strt
 chmod +x swap
 chmod +x menu
+chmod +x v2raay
 wget -O /usr/bin/ssr https://raw.githubusercontent.com/halluboys/xzvnct/main/ssrmu.sh && chmod +x /usr/bin/ssr
 wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/halluboys/xzvnct/main/add-ssr.sh && chmod +x /usr/bin/add-ssr
 wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/halluboys/xzvnct/main/del-ssr.sh && chmod +x /usr/bin/del-ssr
