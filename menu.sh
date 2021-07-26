@@ -4,7 +4,7 @@ bl='\e[36;1m'
 gl='\e[32;1m'
 
 clear 
-
+cat /usr/bin/bannerku | lolcat
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 IPVPS=$(curl -s ipinfo.io/ip )
