@@ -12,11 +12,9 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 clear
-echo "Start Update"
+echo "Start Update" | lolcat
 # update
 cd /usr/bin
-wget -O bannerku "https://raw.githubusercontent.com/halluboys/xzvnct/main/bannerku"
-
 
 wget -O update "https://raw.githubusercontent.com/halluboys/xzvnct/main/update.sh"
 wget -O strt "https://raw.githubusercontent.com/halluboys/xzvnct/main/strt.sh"
@@ -53,6 +51,5 @@ chmod +x wgr
 chmod +x ssssr
 chmod +x ssh
 chmod +x l2tp
-
 chmod +x menu
 echo "done" | lolcat
