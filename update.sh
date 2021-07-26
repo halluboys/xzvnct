@@ -59,6 +59,8 @@ wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/wgr.sh"
 wget -O cfd "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfd.sh"
 wget -O cff "https://raw.githubusercontent.com/halluboys/xzvnct/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfh.sh"
+
+wget -O bannerku "https://raw.githubusercontent.com/halluboys/xzvnct/main/bannerku"
 wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/menu.sh"
 chmod +x cfd
 chmod +x cfh
@@ -103,6 +105,7 @@ chmod +x wgr
 chmod +x ssssr
 chmod +x ssh
 chmod +x l2tp
+chmod +x bannerku
 chmod +x menu
 wget -O /usr/bin/ssr https://raw.githubusercontent.com/halluboys/xzvnct/main/ssrmu.sh && chmod +x /usr/bin/ssr
 wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/halluboys/xzvnct/main/add-ssr.sh && chmod +x /usr/bin/add-ssr
