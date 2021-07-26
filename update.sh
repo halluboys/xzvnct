@@ -48,6 +48,14 @@ wget -O update "https://raw.githubusercontent.com/halluboys/xzvnct/main/update.s
 wget -O strt "https://raw.githubusercontent.com/halluboys/xzvnct/main/strt.sh"
 wget -O swap "https://raw.githubusercontent.com/halluboys/xzvnct/main/swapkvm.sh"
 wget -O v2raay "https://raw.githubusercontent.com/halluboys/xzvnct/main/v2raay.sh"
+wget -o bbr "https://raw.githubusercontent.com/halluboys/xzvnct/main/bbr.sh"
+wget -O l2tp "https://raw.githubusercontent.com/halluboys/xzvnct/main/l2tp.sh"
+wget -O ssh "https://raw.githubusercontent.com/halluboys/xzvnct/main/ssh.sh"
+wget -O ssssr "https://raw.githubusercontent.com/halluboys/xzvnct/main/ssssr.sh"
+wget -O sstpp "https://raw.githubusercontent.com/halluboys/xzvnct/main/sstpp.sh"
+wget -O trojaan "https://raw.githubusercontent.com/halluboys/xzvnct/main/trojaan.sh"
+wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/main/vleess.sh"
+wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/wgr.sh"
 wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/menu.sh"
 chmod +x add-cfd
 chmod +x add-cfh
@@ -84,6 +92,14 @@ chmod +x update
 chmod +x strt
 chmod +x swap
 chmod +x v2raay
+chmod +x bbr
+chmod +x trojaan
+chmod +x sstpp
+chmod +x vleess
+chmod +x wgr
+chmod +x ssssr
+chmod +x ssh
+chmod +x l2tp
 chmod +x menu
 wget -O /usr/bin/ssr https://raw.githubusercontent.com/halluboys/xzvnct/main/ssrmu.sh && chmod +x /usr/bin/ssr
 wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/halluboys/xzvnct/main/add-ssr.sh && chmod +x /usr/bin/add-ssr
