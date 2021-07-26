@@ -56,6 +56,9 @@ wget -O sstpp "https://raw.githubusercontent.com/halluboys/xzvnct/main/sstpp.sh"
 wget -O trojaan "https://raw.githubusercontent.com/halluboys/xzvnct/main/trojaan.sh"
 wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/main/vleess.sh"
 wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/wgr.sh"
+wget -O cfd "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfd.sh"
+wget -O cff "https://raw.githubusercontent.com/halluboys/xzvnct/main/cff.sh"
+wget -O cfh "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfh.sh"
 wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/menu.sh"
 chmod +x add-cfd
 chmod +x add-cfh
