@@ -2,11 +2,10 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo "Checking VPS"
-DOMAIN=xzvnct.my.id
-CF_ID=hammysayang@gmail.com
-CF_KEY=4f080bfcf8bbcdff1578104c1c8b6f8e8374c
+source /root/mail.conf
+DOMAIN=$domain
+CF_ID=$email
+CF_KEY=$key
 set -euo pipefail
 read -p "Masukan Subdomain Anda :" sub
 read -p "Masukan Ip BUG :" IP
