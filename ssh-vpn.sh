@@ -1,5 +1,5 @@
 #!/bin/bash
-# By RPJ WONOSOBO
+# By Halluboy
 # ==================================================
 
 # initializing var
@@ -306,6 +306,8 @@ wget -O port-vless "https://raw.githubusercontent.com/halluboys/xzvnct/main/port
 wget -O wbmn "https://raw.githubusercontent.com/halluboys/xzvnct/main/webmin.sh"
 wget -O xp "https://raw.githubusercontent.com/halluboys/xzvnct/main/xp.sh"
 wget -O update "https://raw.githubusercontent.com/halluboys/xzvnct/main/update.sh"
+wget -O bbr "https://raw.githubusercontent.com/halluboys/xzvnct/main/bbr.sh"
+
 chmod +x add-host
 chmod +x menu
 chmod +x usernew
@@ -336,6 +338,8 @@ chmod +x port-vless
 chmod +x wbmn
 chmod +x xp
 chmod +x update
+chmod +x bbr
+
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
