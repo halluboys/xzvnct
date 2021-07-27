@@ -43,6 +43,8 @@ echo -e   "   24\e[1;33m)\e[m  Cloudflare Add-Ons"
 echo -e   "   25\e[1;33m)\e[m  Pointing BUG"
 echo -e   "   26\e[1;33m)\e[m  Clear log"
 echo -e   "   27\e[1;33m)\e[m  Auto Reboot"
+echo -e   "   28\e[1;33m)\e[m  Cek Bandwidth VPS"
+echo -e   "   29\e[1;33m)\e[m  Update Script"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "   x)   Exit" | lolcat
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
@@ -130,6 +132,12 @@ clear-log
 ;;
 27)
 autoreboot
+;;
+28)
+cek-bw
+;;
+29)
+update
 ;;
 x)
 exit
