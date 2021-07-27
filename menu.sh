@@ -83,7 +83,7 @@ add-host
 certv2ray
 ;;
 11)
-change-port
+change
 ;;
 12)
 autobackup
