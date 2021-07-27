@@ -2,12 +2,12 @@
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- ipv4.icanhazip.com);
-echo "Checking VPS"
+MYIP=$(wget -qO- ipv4.wildyproject.com);
+echo "Script By Haluboy"
 clear
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
-PUBLIC_IP=$(wget -qO- ipv4.icanhazip.com);
+PUBLIC_IP=$(wget -qO- icanhazip.com);
 else
 PUBLIC_IP=$IP
 fi
@@ -35,19 +35,18 @@ VPN_PASSWORD_ENC=$(openssl passwd -1 "$VPN_PASSWORD")
 cat >> /etc/ipsec.d/passwd <<EOF
 $VPN_USER:$VPN_PASSWORD_ENC:xauth-psk
 EOF
-
+clear
 # Update file attributes
 chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 echo -e "### $VPN_USER $exp">>"/var/lib/premium-script/data-user-l2tp"
 cat <<EOF
-
-================================
-L2TP/IPSEC PSK VPN
-
+L2TP/Ipsec Psk VPN Acc Information
+====================================
 Server IP    : $PUBLIC_IP
 IPsec PSK    : myvpn
 Username     : $VPN_USER
 Password     : $VPN_PASSWORD
 Expired ON   : $exp
-=================================
+====================================
+Modified By Haluboy
 EOF
