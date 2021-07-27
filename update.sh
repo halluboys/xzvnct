@@ -61,6 +61,7 @@ wget -O cff "https://raw.githubusercontent.com/halluboys/xzvnct/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfh.sh"
 wget -O cek-bw "https://raw.githubusercontent.com/halluboys/xzvnct/main/cek-bw.sh"
 wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/menu.sh"
+wget -O ssh-vpn "https://raw.githubusercontent.com/halluboys/xzvnct/main/ssh-vpn.sh"
 
 chmod +x cfd
 chmod +x cfh
@@ -110,6 +111,7 @@ chmod +x strt
 chmod +x swap
 chmod +x cek-bw
 chmod +x menu
+chmod +x ssh-vpn
 wget -O /usr/bin/ssr https://raw.githubusercontent.com/halluboys/xzvnct/main/ssrmu.sh && chmod +x /usr/bin/ssr
 wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/halluboys/xzvnct/main/add-ssr.sh && chmod +x /usr/bin/add-ssr
 wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/halluboys/xzvnct/main/del-ssr.sh && chmod +x /usr/bin/del-ssr
