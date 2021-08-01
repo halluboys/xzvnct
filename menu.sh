@@ -41,7 +41,7 @@ echo -e   "   22\e[1;33m)\e[m  Install BBR"
 echo -e   "   23\e[1;33m)\e[m  Add ID Cloudflare"
 echo -e   "   24\e[1;33m)\e[m  Cloudflare Add-Ons"
 echo -e   "   25\e[1;33m)\e[m  Pointing BUG"
-echo -e   "   26\e[1;33m)\e[m  Clear log"
+echo -e   "   26\e[1;33m)\e[m  TrojanGo"
 echo -e   "   27\e[1;33m)\e[m  Auto Reboot"
 echo -e   "   28\e[1;33m)\e[m  Cek Bandwidth VPS"
 echo -e   "   29\e[1;33m)\e[m  Update Script"
@@ -128,7 +128,7 @@ cfd
 cfh
 ;;
 26)
-clear-log
+trojangoo
 ;;
 27)
 autoreboot
