@@ -22,9 +22,9 @@ touch /etc/trojan-go/akun.conf
 mkdir -p /etc/trojan-go/
 chmod 755 /etc/trojan-go/
 touch /etc/trojan-go/trojan-go.pid
-wget -O /usr/local/bin/trojan-go https://github.com/halluboys/scc/raw/main/trojan-go
-wget -O /usr/local/bin/geoip.dat https://raw.githubusercontent.com/halluboys/scc/main/geoip.dat
-wget -O /usr/local/bin/geosite.dat https://raw.githubusercontent.com/halluboys/scc/main/geosite.dat
+wget -O /usr/local/bin/trojan-go https://github.com/halluboys/xzvnct/raw/main/trojan-go
+wget -O /usr/local/bin/geoip.dat https://raw.githubusercontent.com/halluboys/xzvnct/main/geoip.dat
+wget -O /usr/local/bin/geosite.dat https://raw.githubusercontent.com/halluboys/xzvnct/main/geosite.dat
 chmod +x /usr/local/bin/trojan-go
 
 # Service
