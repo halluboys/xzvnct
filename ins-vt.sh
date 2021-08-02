@@ -491,6 +491,7 @@ systemctl enable trojan
 systemctl restart v2ray
 systemctl enable v2ray
 cd /usr/bin
+wget -O add-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/add-trgo.sh"
 wget -O add-ws "https://raw.githubusercontent.com/halluboys/xzvnct/main/add-ws.sh"
 wget -O add-vless "https://raw.githubusercontent.com/halluboys/xzvnct/main/add-vless.sh"
 wget -O add-tr "https://raw.githubusercontent.com/halluboys/xzvnct/main/add-tr.sh"
@@ -504,6 +505,7 @@ wget -O renew-ws "https://raw.githubusercontent.com/halluboys/xzvnct/main/renew-
 wget -O renew-vless "https://raw.githubusercontent.com/halluboys/xzvnct/main/renew-vless.sh"
 wget -O renew-tr "https://raw.githubusercontent.com/halluboys/xzvnct/main/renew-tr.sh"
 wget -O certv2ray "https://raw.githubusercontent.com/halluboys/xzvnct/main/cert.sh"
+chmod +x add+trgo
 chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr
