@@ -28,7 +28,7 @@ case $trojan in
 add-tr
 ;;
 2)
-go-trgo
+add-trgo
 ;;
 3)
 del-tr
