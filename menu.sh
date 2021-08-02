@@ -20,7 +20,7 @@ echo -e   "   4\e[1;33m)\e[m Panel SSTP  Account"
 echo -e   "   5\e[1;33m)\e[m Panel SSR & SS Account"
 echo -e   "   6\e[1;33m)\e[m Panel V2Ray"
 echo -e   "   7\e[1;33m)\e[m Panel VLess"
-echo -e   "   8\e[1;33m)\e[m Panel TRojan"
+echo -e   "   8\e[1;33m)\e[m Panel TRojan & TRojanGo"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "                             SYSTEM MENU\e[m" | lolcat
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
@@ -41,7 +41,7 @@ echo -e   "   22\e[1;33m)\e[m  Install BBR"
 echo -e   "   23\e[1;33m)\e[m  Add ID Cloudflare"
 echo -e   "   24\e[1;33m)\e[m  Cloudflare Add-Ons"
 echo -e   "   25\e[1;33m)\e[m  Pointing BUG"
-echo -e   "   26\e[1;33m)\e[m  TrojanGo"
+echo -e   "   26\e[1;33m)\e[m  Clear Log"
 echo -e   "   27\e[1;33m)\e[m  Auto Reboot"
 echo -e   "   28\e[1;33m)\e[m  Cek Bandwidth VPS"
 echo -e   "   29\e[1;33m)\e[m  Update Script"
@@ -127,8 +127,8 @@ cfd
 25)
 cfh
 ;;
-26)
-trojangoo
+26
+clear-log
 ;;
 27)
 autoreboot
