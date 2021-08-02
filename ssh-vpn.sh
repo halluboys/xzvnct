@@ -380,6 +380,7 @@ wget -O /usr/bin/user-limit https://raw.githubusercontent.com/halluboys/xzvnct/m
 wget -O cfd "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfd.sh"
 wget -O cff "https://raw.githubusercontent.com/halluboys/xzvnct/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfh.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/halluboys/xzvnct/main/cert.sh"
 wget -O autoreboot "https://raw.githubusercontent.com/halluboys/xzvnct/main/autoreboot.sh"
 wget -O bannerku "https://raw.githubusercontent.com/halluboys/xzvnct/main/bannerku"
 wget -O v2raay "https://raw.githubusercontent.com/halluboys/xzvnct/main/v2raay.sh"
@@ -426,6 +427,7 @@ chmod +x bbr
 chmod +x cfd
 chmod +x cff
 chmod +x cfh
+chmod +x certv2ray
 chmod +x autoreboot
 chmod +x v2raay
 chmod +x trojaan
