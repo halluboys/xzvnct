@@ -382,6 +382,14 @@ wget -O cff "https://raw.githubusercontent.com/halluboys/xzvnct/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfh.sh"
 wget -O autoreboot "https://raw.githubusercontent.com/halluboys/xzvnct/main/autoreboot.sh"
 wget -O bannerku "https://raw.githubusercontent.com/halluboys/xzvnct/main/bannerku"
+wget -O v2raay "https://raw.githubusercontent.com/halluboys/xzvnct/main/v2raay.sh"
+wget -O l2tp "https://raw.githubusercontent.com/halluboys/xzvnct/main/l2tp.sh"
+wget -O ssh "https://raw.githubusercontent.com/halluboys/xzvnct/main/ssh.sh"
+wget -O ssssr "https://raw.githubusercontent.com/halluboys/xzvnct/main/ssssr.sh"
+wget -O sstpp "https://raw.githubusercontent.com/halluboys/xzvnct/main/sstpp.sh"
+wget -O trojaan "https://raw.githubusercontent.com/halluboys/xzvnct/main/trojaan.sh"
+wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/main/vleess.sh"
+wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/wgr.sh"
 
 chmod +x add-host
 chmod +x menu
@@ -419,6 +427,14 @@ chmod +x cfd
 chmod +x cff
 chmod +x cfh
 chmod +x autoreboot
+chmod +x v2raay
+chmod +x trojaan
+chmod +x sstpp
+chmod +x vleess
+chmod +x wgr
+chmod +x ssssr
+chmod +x ssh
+chmod +x l2tp
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
