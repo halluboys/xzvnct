@@ -171,6 +171,7 @@ apt-get remove --purge exim4 -y
 
 # install wget and curl
 apt -y install wget curl
+apt -y install python
 
 # set time GMT +7
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
@@ -257,7 +258,7 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [dropbear]
-accept = 443
+accept = 222
 connect = 127.0.0.1:109
 
 [dropbear]
@@ -267,6 +268,14 @@ connect = 127.0.0.1:22
 [openvpn]
 accept = 442
 connect = 127.0.0.1:1194
+
+[wsssl]
+accept = 445
+connect = 700
+
+[trojango]
+accept = 443
+connect = 127.0.0.1:81
 
 END
 
@@ -367,6 +376,12 @@ wget -O wbmn "https://raw.githubusercontent.com/halluboys/xzvnct/main/webmin.sh"
 wget -O xp "https://raw.githubusercontent.com/halluboys/xzvnct/main/xp.sh"
 wget -O update "https://raw.githubusercontent.com/halluboys/xzvnct/main/update.sh"
 wget -O bbr "https://raw.githubusercontent.com/halluboys/xzvnct/main/bbr.sh"
+wget -O /usr/bin/user-limit https://raw.githubusercontent.com/halluboys/xzvnct/main/user-limit.sh && chmod +x /usr/bin/user-limit
+wget -O cfd "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfd.sh"
+wget -O cff "https://raw.githubusercontent.com/halluboys/xzvnct/main/cff.sh"
+wget -O cfh "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfh.sh"
+wget -O autoreboot "https://raw.githubusercontent.com/halluboys/xzvnct/main/autoreboot.sh"
+wget -O bannerku "https://raw.githubusercontent.com/halluboys/xzvnct/main/bannerku"
 
 chmod +x add-host
 chmod +x menu
@@ -398,7 +413,12 @@ chmod +x port-vless
 chmod +x wbmn
 chmod +x xp
 chmod +x update
+chmod +x bannerku
 chmod +x bbr
+chmod +x cfd
+chmod +x cff
+chmod +x cfh
+chmod +x autoreboot
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
