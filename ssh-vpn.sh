@@ -347,7 +347,7 @@ netfilter-persistent reload
 apt -y install ruby
 gem install lolcat
 apt -y install figlet
-
+apt -y install dos2unix
 
 # download script
 cd /usr/bin
@@ -397,6 +397,7 @@ wget -O sstpp "https://raw.githubusercontent.com/halluboys/xzvnct/main/sstpp.sh"
 wget -O trojaan "https://raw.githubusercontent.com/halluboys/xzvnct/main/trojaan.sh"
 wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/main/vleess.sh"
 wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/wgr.sh"
+wget -O add-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/add-trgo.sh"
 
 chmod +x add-host
 chmod +x menu
@@ -443,6 +444,8 @@ chmod +x wgr
 chmod +x ssssr
 chmod +x ssh
 chmod +x l2tp
+chmod +x add-trgo
+dos2unix add-trgo
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
