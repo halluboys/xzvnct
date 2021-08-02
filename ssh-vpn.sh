@@ -343,6 +343,12 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 
+# install python
+apt -y install ruby
+gem install lolcat
+apt -y install figlet
+
+
 # download script
 cd /usr/bin
 wget -O add-host "https://raw.githubusercontent.com/halluboys/xzvnct/main/add-host.sh"
