@@ -9,9 +9,13 @@ echo -e "\e[32m═════════════════════�
 echo -e "             ═══[Trojan]═══"
 echo -e "\e[32m════════════════════════════════════════\e[m" | lolcat
 echo -e " 1)  Create Trojan Account"
-echo -e " 2)  Deleting Trojan Account"
-echo -e " 3)  Renew Trojan Account"
-echo -e " 4)  Check User Login Trojan"
+echo -e " 2)  Create TrojanGo Account"
+echo -e " 3)  Deleting Trojan Account"
+echo -e " 4)  Deleting TrojanGo Account"
+echo -e " 5)  Renew Trojan Account"
+echo -e " 6)  Renew TrojanGo Account"
+echo -e " 7)  Check User Login Trojan"
+echo -e " 8)  Check User Login TrojanGo"
 echo -e ""
 echo -e "\e[1;32m══════════════════════════════════════════\e[m" | lolcat
 echo -e " x)   MENU"
@@ -24,14 +28,26 @@ case $trojan in
 add-tr
 ;;
 2)
-del-tr
+go-trgo
 ;;
 3)
-renew-tr
+del-tr
 ;;
 4)
+del-trgo
+;;
+5)
+renew-tr
+;;
+6)
+renew-trgo
+;;
+7)
 cek-tr
 ;;
+8)
+cek-trgo
+;; 
 x)
 menu
 ;;
