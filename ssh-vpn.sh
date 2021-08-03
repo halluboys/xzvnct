@@ -444,8 +444,8 @@ chmod +x autoreboot
 #chmod +x ssssr
 #chmod +x ssh
 #chmod +x l2tp
-#chmod +x add-trgo
-#dos2unix add-trgo
+chmod +x add-trgo
+dos2unix add-trgo
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
