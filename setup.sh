@@ -182,6 +182,14 @@ connect = 127.0.0.1:22
 accept = 442
 connect = 127.0.0.1:1194
 
+[wsssl]
+accept = 445
+connect = 700
+
+[trojango]
+accept = 443
+connect = 127.0.0.1:81
+
 END
 
 # make a certificate
@@ -281,6 +289,14 @@ wget -O wbmn "https://raw.githubusercontent.com/halluboys/xzvnct/main/webmin.sh"
 wget -O xp "https://raw.githubusercontent.com/halluboys/xzvnct/main/xp.sh"
 wget -O kernel-updt "https://raw.githubusercontent.com/halluboys/xzvnct/main/kernel-update.sh"
 wget -O bbr "https://raw.githubusercontent.com/halluboys/xzvnct/main/bbr.sh"
+wget -O /usr/bin/user-limit https://raw.githubusercontent.com/halluboys/xzvnct/main/user-limit.sh && chmod +x /usr/bin/user-limit
+wget -O cfd "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfd.sh"
+wget -O cff "https://raw.githubusercontent.com/halluboys/xzvnct/main/cff.sh"
+wget -O cfh "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfh.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/halluboys/xzvnct/main/cert.sh"
+wget -O autoreboot "https://raw.githubusercontent.com/halluboys/xzvnct/main/autoreboot.sh"
+wget -O bannerku "https://raw.githubusercontent.com/halluboys/xzvnct/main/bannerku"
+
 chmod +x add-host
 chmod +x menu
 chmod +x usernew
@@ -312,6 +328,12 @@ chmod +x wbmn
 chmod +x xp
 chmod +x kernel-updt
 chmod +x bbr
+chmod +x cfd
+chmod +x cff
+chmod +x cfh
+chmod +x certv2ray
+chmod +x autoreboot
+chmod +x bannerku
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
