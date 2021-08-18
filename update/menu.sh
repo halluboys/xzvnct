@@ -48,7 +48,7 @@ echo -e   "  \e[1;32m-----------------------------------------------------------
 echo -e   "   x)   Exit" | lolcat
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   ""
-read -p "     Select From Options [1-8 or x] :  " menu | lolcat
+read -p "     Select From Options [1-28 or x] :  " menu | lolcat
 echo -e   ""
 case $menu in
 1)
