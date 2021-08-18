@@ -395,14 +395,14 @@ wget -O bannerku "https://raw.githubusercontent.com/halluboys/xzvnct/main/banner
 #wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/wgr.sh"
 wget -O add-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/add-trgo.sh"
 wget -O xp-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/xp-trgo.sh"
-wget -O l2tp "https://raw.githubusercontent.com/halluboys/xzvnct/update/main/l2tp.sh"
-wget -O ssh "https://raw.githubusercontent.com/halluboys/xzvnct/update/main/ssh.sh"
-wget -O ssssr "https://raw.githubusercontent.com/halluboys/xzvnct/update/main/ssssr.sh"
-wget -O sstpp "https://raw.githubusercontent.com/halluboys/xzvnct/update/main/sstpp.sh"
-wget -O trojaan "https://raw.githubusercontent.com/halluboys/xzvnct/update/main/trojaan.sh"
-wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/update/main/vleess.sh"
-wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/update/main/wgr.sh"
-wget -O menu "https://raw.githubusercontent.com/update/halluboys/xzvnct/main/menu.sh"
+wget -O l2tp "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/l2tp.sh"
+wget -O ssh "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/ssh.sh"
+wget -O ssssr "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/ssssr.sh"
+wget -O sstpp "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/sstpp.sh"
+wget -O trojaan "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/trojaan.sh"
+wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/vleess.sh"
+wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/wgr.sh"
+wget -O menu "https://raw.githubusercontent.com/update/halluboys/xzvnct/main/update/menu.sh"
 
 chmod +x add-host
 chmod +x menu
