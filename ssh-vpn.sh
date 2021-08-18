@@ -403,6 +403,7 @@ wget -O trojaan "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/
 wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/vleess.sh"
 wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/wgr.sh"
 wget -O menu "https://raw.githubusercontent.com/update/halluboys/xzvnct/main/update/menu.sh"
+wget -O update "https://raw.githubusercontent.com/update/halluboys/xzvnct/main/update.sh"
 
 chmod +x add-host
 chmod +x menu
@@ -458,6 +459,7 @@ chmod +x wgr
 chmod +x ssssr
 chmod +x ssh
 chmod +x l2tp
+chmod +x update
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
