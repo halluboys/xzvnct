@@ -14,10 +14,10 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=www.lestakun.tech
-organizationalunit=www.lestakun.tech
-commonname=www.lestakun.tech
-email=lesta@lestakun.tech
+organization=www.xzvnct.my.id
+organizationalunit=www.xzvnct.my.id
+commonname=www.xzvnct.my.id
+email=haluboys@xzvnct.my.id
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/halluboys/xzvnct/main/password"
