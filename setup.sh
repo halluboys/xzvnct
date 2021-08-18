@@ -20,7 +20,7 @@ mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
 # MengInstall SSH
 export DEBIAN_FRONTEND=noninteractive
-MYIP=$(wget -qO- ipv4.wildyproject.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 NET=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
