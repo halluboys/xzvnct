@@ -273,10 +273,6 @@ connect = 127.0.0.1:1194
 accept = 445
 connect = 700
 
-[trojango]
-accept = 443
-connect = 127.0.0.1:81
-
 END
 
 # make a certificate
@@ -398,6 +394,7 @@ wget -O bannerku "https://raw.githubusercontent.com/halluboys/xzvnct/main/banner
 #wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/main/vleess.sh"
 #wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/wgr.sh"
 wget -O add-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/add-trgo.sh"
+wget -O xp-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/xp-trgo.sh"
 
 chmod +x add-host
 chmod +x menu
@@ -445,7 +442,7 @@ chmod +x autoreboot
 #chmod +x ssh
 #chmod +x l2tp
 chmod +x add-trgo
-dos2unix add-trgo
+chmod +x xp-trgo
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
