@@ -402,8 +402,8 @@ wget -O sstpp "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/ss
 wget -O trojaan "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/trojaan.sh"
 wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/vleess.sh"
 wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/wgr.sh"
-wget -O menu "https://raw.githubusercontent.com/update/halluboys/xzvnct/main/update/menu.sh"
 wget -O update "https://raw.githubusercontent.com/update/halluboys/xzvnct/main/update.sh"
+wget -O menu "https://raw.githubusercontent.com/update/halluboys/xzvnct/main/update/menu.sh"
 
 chmod +x add-host
 chmod +x menu
