@@ -349,7 +349,7 @@ apt -y install dos2unix
 cd /usr/bin
 wget -O add-host "https://raw.githubusercontent.com/halluboys/xzvnct/main/add-host.sh"
 wget -O about "https://raw.githubusercontent.com/halluboys/xzvnct/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/menu.sh"
+#wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/menu.sh"
 wget -O usernew "https://raw.githubusercontent.com/halluboys/xzvnct/main/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/halluboys/xzvnct/main/trial.sh"
 wget -O hapus "https://raw.githubusercontent.com/halluboys/xzvnct/main/hapus.sh"
@@ -395,6 +395,14 @@ wget -O bannerku "https://raw.githubusercontent.com/halluboys/xzvnct/main/banner
 #wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/wgr.sh"
 wget -O add-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/add-trgo.sh"
 wget -O xp-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/xp-trgo.sh"
+wget -O l2tp "https://raw.githubusercontent.com/halluboys/xzvnct/update/main/l2tp.sh"
+wget -O ssh "https://raw.githubusercontent.com/halluboys/xzvnct/update/main/ssh.sh"
+wget -O ssssr "https://raw.githubusercontent.com/halluboys/xzvnct/update/main/ssssr.sh"
+wget -O sstpp "https://raw.githubusercontent.com/halluboys/xzvnct/update/main/sstpp.sh"
+wget -O trojaan "https://raw.githubusercontent.com/halluboys/xzvnct/update/main/trojaan.sh"
+wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/update/main/vleess.sh"
+wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/update/main/wgr.sh"
+wget -O menu "https://raw.githubusercontent.com/update/halluboys/xzvnct/main/menu.sh"
 
 chmod +x add-host
 chmod +x menu
@@ -443,6 +451,13 @@ chmod +x autoreboot
 #chmod +x l2tp
 chmod +x add-trgo
 chmod +x xp-trgo
+chmod +x trojaan
+chmod +x sstpp
+chmod +x vleess
+chmod +x wgr
+chmod +x ssssr
+chmod +x ssh
+chmod +x l2tp
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
