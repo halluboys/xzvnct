@@ -16,7 +16,7 @@ echo "Start Update"
 # update
 cd /usr/bin
 
-wget -O v2raay ""
+wget -O v2raay "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/v2raay.sh"
 wget -o bbr "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/bbr.sh"
 wget -O l2tp "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/l2tp.sh"
 wget -O ssh "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/ssh.sh"
@@ -26,7 +26,7 @@ wget -O trojaan "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/
 wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/vleess.sh"
 wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/wgr.sh"
 wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/menu.sh"
-wget -O ssh-vpn "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/ssh-vpn.sh"
+wget -O ssh-vpn "https://raw.githubusercontent.com/halluboys/xzvnct/main/ssh-vpn.sh"
 
 chmod +x v2raay
 chmod +x bbr
