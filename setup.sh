@@ -186,10 +186,6 @@ connect = 127.0.0.1:1194
 accept = 445
 connect = 700
 
-[trojango]
-accept = 443
-connect = 127.0.0.1:81
-
 END
 
 # make a certificate
@@ -453,7 +449,7 @@ echo "   - V2RAY Vmess None TLS    : 80"  | tee -a log-install.txt
 echo "   - V2RAY Vless TLS         : 2083"  | tee -a log-install.txt
 echo "   - V2RAY Vless None TLS    : 8880"  | tee -a log-install.txt
 echo "   - Trojan                  : 2087"  | tee -a log-install.txt
-echo "   - Trojango                : 443"  | tee -a log-install.txt
+echo "   - Trojango                : 2097"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
