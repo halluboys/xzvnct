@@ -22,7 +22,6 @@
    - V2RAY Vless TLS         : 2083
    - V2RAY Vless None TLS    : 8880
    - Trojan                  : 2087
-   - TrojanGo                : 2096
    >>> Server Information & Other Features
    - Timezone                : Asia/Jakarta (GMT +7)
    - Fail2Ban                : [ON]
