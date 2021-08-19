@@ -1,6 +1,12 @@
 #!/bin/bash
 # Trojan Go Auto Setup 
 # =========================
+apt update -y
+apt upgrade -y
+apt install wget -y
+apt install screen -y
+apt install curl -y
+apt install zip
 
 # Domain 
 domain=$(cat /etc/v2ray/domain)
