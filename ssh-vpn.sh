@@ -393,8 +393,8 @@ wget -O bannerku "https://raw.githubusercontent.com/halluboys/xzvnct/main/banner
 #wget -O trojaan "https://raw.githubusercontent.com/halluboys/xzvnct/main/trojaan.sh"
 #wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/main/vleess.sh"
 #wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/wgr.sh"
-wget -O add-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/add-trgo.sh"
-wget -O xp-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/xp-trgo.sh"
+#wget -O add-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/add-trgo.sh"
+#wget -O xp-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/xp-trgo.sh"
 wget -O l2tp "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/l2tp.sh"
 wget -O ssh "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/ssh.sh"
 wget -O ssssr "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/ssssr.sh"
@@ -450,8 +450,8 @@ chmod +x autoreboot
 #chmod +x ssssr
 #chmod +x ssh
 #chmod +x l2tp
-chmod +x add-trgo
-chmod +x xp-trgo
+#chmod +x add-trgo
+#chmod +x xp-trgo
 chmod +x trojaan
 chmod +x sstpp
 chmod +x vleess
