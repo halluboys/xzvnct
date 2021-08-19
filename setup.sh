@@ -253,7 +253,7 @@ netfilter-persistent reload
 cd /usr/bin
 wget -O add-host "https://raw.githubusercontent.com/halluboys/xzvnct/main/add-host.sh"
 wget -O about "https://raw.githubusercontent.com/halluboys/xzvnct/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/menu.sh"
+wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/menu.sh"
 wget -O usernew "https://raw.githubusercontent.com/halluboys/xzvnct/main/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/halluboys/xzvnct/main/trial.sh"
 wget -O hapus "https://raw.githubusercontent.com/halluboys/xzvnct/main/hapus.sh"
