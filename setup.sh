@@ -33,7 +33,7 @@ locality=Indonesia
 organization=Selalu
 organizationalunit=Baca
 commonname=Bismillah
-email=paoandest@gmail.com
+email=bitch@gmail.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/halluboys/xzvnct/main/password"
