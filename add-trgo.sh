@@ -4,6 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
+fi
 clear
 uuid=$(cat /etc/trojan-go/uuid.txt)
 source /var/lib/premium-script/ipvps.conf
