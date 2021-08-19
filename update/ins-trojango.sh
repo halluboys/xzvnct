@@ -21,18 +21,21 @@ wget -O /etc/trojan-go/trojan-go https://github.com/halluboys/xzvnct/raw/main/tr
 wget -O /etc/trojan-go/geoip.dat https://raw.githubusercontent.com/halluboys/xzvnct/main/geoip.dat
 wget -O /etc/trojan-go/geosite.dat https://raw.githubusercontent.com/halluboys/xzvnct/main/geosite.dat
 chmod +x /etc/trojan-go/trojan-go
-cat <<EOF > /etc/trojan-go/config.json
+# Config
+cat > /etc/trojan-go/config.json << END
 {
-    "run_type": "server",
-    "local_addr": "0.0.0.0",
-    "local_port": 443,
-    "remote_addr": "127.0.0.1",
-    "remote_port": 81,
-    "log_level": 1,
-    "log_file": "/var/log/trojan-go.log",
-    "password": [
-        "$uuid"
-    ],
+  "run_type": "server",
+  "local_addr": "0.0.0.0",
+  "local_port": 443,
+  "remote_addr": "127.0.0.1",
+  "remote_port": 81,
+  "log_level": 1,
+  "log_file": "/var/log/trojan-go.log",
+  "password": [
+    "$uuid",
+    "$uuid",
+    ""
+  ],
   "disable_http_check": false,
   "udp_timeout": 60,
   "ssl": {
@@ -41,24 +44,24 @@ cat <<EOF > /etc/trojan-go/config.json
     "cert": "/etc/v2ray/v2ray.crt",
     "key": "/etc/v2ray/v2ray.key",
     "key_password": "",
-    "cipher": "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384:TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256:TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+    "cipher": "",
     "curves": "",
-    "prefer_server_cipher": true,
+    "prefer_server_cipher": false,
     "sni": "$domain",
     "alpn": [
-      "http/1.1"
+      "h2"
     ],
     "session_ticket": true,
     "reuse_session": true,
     "plain_http_response": "",
     "fallback_addr": "127.0.0.1",
     "fallback_port": 443,
-    "fingerprint": ""
+    "fingerprint": "firefox"
   },
   "tcp": {
     "no_delay": true,
     "keep_alive": true,
-    "prefer_ipv4": false
+    "prefer_ipv4": true
   },
   "mux": {
     "enabled": true,
@@ -66,18 +69,18 @@ cat <<EOF > /etc/trojan-go/config.json
     "idle_timeout": 60
   },
   "router": {
-    "enabled": true,
+    "enabled": false,
     "bypass": [],
     "proxy": [],
     "block": [],
     "default_policy": "proxy",
     "domain_strategy": "as_is",
-    "geoip": "/etc/trojan-go/geoip.dat",
-    "geosite": "/etc/trojan-go/geosite.dat"
+    "geoip": "/usr/local/bin/geoip.dat",
+    "geosite": "/usr/local/bin/geosite.dat"
   },
   "websocket": {
     "enabled": true,
-    "path": "/bokir_tampan",
+    "path": "/trojango",
     "host": "$domain"
   },
   "shadowsocks": {
@@ -122,37 +125,17 @@ cat <<EOF > /etc/trojan-go/config.json
     }
   }
 }
-EOF
-cat <<EOF > /etc/systemd/system/trojan-go.service
-[Unit]
-Description=Trojan-Go 
-Documentation=https://p4gefau1t.github.io/trojan-go/
-After=network.target nss-lookup.target
 
-[Service]
-User=root
-NoNewPrivileges=true
-ExecStart=/etc/trojan-go/trojan-go -config /etc/trojan-go/config.json
-Restart=on-failure
-RestartSec=10s
-LimitNOFILE=infinity
-
-[Install]
-WantedBy=multi-user.target
-
-EOF
-
-cat <<EOF > /etc/trojan-go/uuid.txt
-$uuid
-EOF
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 443 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 443 -j ACCEPT
-iptables-save >/etc/iptables.rules.v4
+END
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2096 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p udp --dport 2096 -j ACCEPT
+iptables-save > /etc/iptables.up.rules
+iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
-systemctl daemon-reload
 
 # Starting
 systemctl daemon-reload
-systemctl enable trojan-go.service
+systemctl enable trojan-go
 systemctl start trojan-go
+
