@@ -27,7 +27,7 @@ wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/v
 wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/wgr.sh"
 wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/menu.sh"
 wget -O ssh-vpn "https://raw.githubusercontent.com/halluboys/xzvnct/main/ssh-vpn.sh"
-wget -O ins-trojango "https://raw.githubusercontent.com/halluboys/xzvnct/main/ins-trojango.sh"
+wget -O ins-trojango "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/ins-trojango.sh"
 wget -O add-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/add-trgo.sh"
 chmod +x v2raay
 chmod +x bbr
