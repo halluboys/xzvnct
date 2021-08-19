@@ -2,6 +2,12 @@
 # Trojan Go Auto Setup 
 # =========================
 
+apt update -y
+apt upgrade -y
+apt install wget -y
+apt install screen -y
+apt install curl -y
+apt install zip
 # Domain 
 domain=$(cat /etc/v2ray/domain)
 
@@ -11,16 +17,35 @@ uuid=$(cat /proc/sys/kernel/random/uuid)
 # Trojan Go Akun 
 mkdir -p /etc/trojan-go/
 touch /etc/trojan-go/akun.conf
-touch /etc/trojan-go/uuid.txt
 
 # Installing Trojan Go
 mkdir -p /etc/trojan-go/
-chmod 777 /etc/trojan-go/
+chmod 755 /etc/trojan-go/
 touch /etc/trojan-go/trojan-go.pid
-wget -O /etc/trojan-go/trojan-go https://github.com/halluboys/xzvnct/raw/main/trojan-go
-wget -O /etc/trojan-go/geoip.dat https://raw.githubusercontent.com/halluboys/xzvnct/main/geoip.dat
-wget -O /etc/trojan-go/geosite.dat https://raw.githubusercontent.com/halluboys/xzvnct/main/geosite.dat
-chmod +x /etc/trojan-go/trojan-go
+wget -O /usr/local/bin/trojan-go https://github.com/halluboys/xzvnct/raw/main/trojan-go
+wget -O /usr/local/bin/geoip.dat https://raw.githubusercontent.com/halluboys/xzvnct/main/geoip.dat
+wget -O /usr/local/bin/geosite.dat https://raw.githubusercontent.com/halluboys/xzvnct/main/geosite.dat
+chmod +x /usr/local/bin/trojan-go
+
+# Service
+cat > /etc/systemd/system/trojan-go.service << END
+[Unit]
+Description=Trojan-Go 
+Documentation=https://p4gefau1t.github.io/trojan-go/
+After=network.target nss-lookup.target
+
+[Service]
+User=root
+NoNewPrivileges=true
+ExecStart=/usr/local/bin/trojan-go -config /etc/trojan-go/config.json
+Restart=on-failure
+RestartSec=10s
+LimitNOFILE=infinity
+
+[Install]
+WantedBy=multi-user.target
+END
+
 # Config
 cat > /etc/trojan-go/config.json << END
 {
@@ -138,4 +163,3 @@ netfilter-persistent reload
 systemctl daemon-reload
 systemctl enable trojan-go
 systemctl start trojan-go
-
