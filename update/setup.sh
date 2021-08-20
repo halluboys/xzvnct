@@ -33,7 +33,7 @@ wget https://raw.githubusercontent.com/halluboys/xzvnct/main/ins-vt.sh && chmod 
 wget https://raw.githubusercontent.com/halluboys/xzvnct/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 wget https://raw.githubusercontent.com/halluboys/xzvnct/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 #install trojan-go
-wget https://raw.githubusercontent.com/halluboys/xzvnct/main/update/ins-trojango.sh && chmod +x ins-trojango.sh && screen -S Trojan-go ./ins-trojango.sh
+#wget https://raw.githubusercontent.com/halluboys/xzvnct/main/update/ins-trojango.sh && chmod +x ins-trojango.sh && screen -S Trojan-go ./ins-trojango.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -43,7 +43,7 @@ rm -f /root/ssr.sh
 rm -f /root/ins-vt.sh
 rm -f /root/ipsec.sh
 rm -f /root/set-br.sh
-rm -f /root/ins-trojango.sh
+#rm -f /root/ins-trojango.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
