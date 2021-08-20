@@ -20,13 +20,12 @@ echo "IP=" >> /var/lib/premium-script/ipvps.conf
 wget https://raw.githubusercontent.com/halluboys/xzvnct/main/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
 wget https://raw.githubusercontent.com/halluboys/xzvnct/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://raw.githubusercontent.com/halluboys/xzvnct/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
-#wget https://raw.githubusercontent.com/halluboys/xzvnct/main/weleh.sh && chmod +x weleh.sh && screen -S weleh ./weleh.sh
+#wget https://raw.githubusercontent.com/halluboys/xzvnct/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
-wget https://raw.githubusercontent.com/halluboys/xzvnct/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://raw.githubusercontent.com/halluboys/xzvnct/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+#wget https://raw.githubusercontent.com/halluboys/xzvnct/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+#wget https://raw.githubusercontent.com/halluboys/xzvnct/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
-wget https://raw.githubusercontent.com/halluboys/xzvnct/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+#wget https://raw.githubusercontent.com/halluboys/xzvnct/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
 wget https://raw.githubusercontent.com/halluboys/xzvnct/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install L2TP
@@ -91,7 +90,6 @@ echo "   - V2RAY Vmess None TLS    : 80"  | tee -a log-install.txt
 echo "   - V2RAY Vless TLS         : 2083"  | tee -a log-install.txt
 echo "   - V2RAY Vless None TLS    : 8880"  | tee -a log-install.txt
 echo "   - Trojan                  : 2087"  | tee -a log-install.txt
-echo "   - TrojanGO                : 443"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
