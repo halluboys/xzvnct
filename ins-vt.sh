@@ -503,6 +503,9 @@ wget -O cek-tr "https://raw.githubusercontent.com/halluboys/xzvnct/cek-tr.sh"
 wget -O renew-ws "https://raw.githubusercontent.com/halluboys/xzvnct/main/renew-ws.sh"
 wget -O renew-vless "https://raw.githubusercontent.com/halluboys/xzvnct/main/renew-vless.sh"
 wget -O renew-tr "https://raw.githubusercontent.com/halluboys/xzvnct/main/renew-tr.sh"
+wget -O xp-ws "https://raw.githubusercontent.com/lesta-1/wisang/main/vray/xp-ws.sh"
+wget -O xp-tr "https://raw.githubusercontent.com/lesta-1/wisang/main/vray/xp-tr.sh"
+wget -O xp-vless "https://raw.githubusercontent.com/lesta-1/wisang/main/vray/xp-vless.sh"
 wget -O certv2ray "https://raw.githubusercontent.com/halluboys/xzvnct/main/cert.sh"
 
 chmod +x add-ws
@@ -517,8 +520,14 @@ chmod +x cek-tr
 chmod +x renew-ws
 chmod +x renew-vless
 chmod +x renew-tr
+chmod +x xp-ws
+chmod +x xp-tr
+chmod +x xp-vless
 chmod +x certv2ray
 cd
 rm -f ins-vt.sh
 mv /root/domain /etc/v2ray
 
+echo "0 0 * * * root xp-ws" >> /etc/crontab
+echo "0 0 * * * root xp-tr" >> /etc/crontab
+echo "0 0 * * * root xp-vless" >> /etc/crontab
