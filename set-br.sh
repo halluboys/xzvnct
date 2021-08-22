@@ -19,9 +19,9 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user email lestakun
-from email lestakun@gmail.com
-password zglxzsuoyhptwiyf
+user email xzvnct
+from email hammysayang@gmail.com
+password Windows7
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
