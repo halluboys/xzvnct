@@ -406,6 +406,7 @@ wget -O running "https://raw.githubusercontent.com/halluboys/xzvnct/main/running
 wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/menu.sh"
 
 chmod +x add-host
+chmod +x about
 chmod +x menu
 chmod +x usernew
 chmod +x trial
