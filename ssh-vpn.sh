@@ -390,19 +390,11 @@ wget -O /usr/bin/user-limit https://raw.githubusercontent.com/halluboys/xzvnct/m
 wget -O cfd "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfd.sh"
 wget -O cff "https://raw.githubusercontent.com/halluboys/xzvnct/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/halluboys/xzvnct/main/cfh.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/halluboys/xzvnct/main/cert.sh"
 wget -O autoreboot "https://raw.githubusercontent.com/halluboys/xzvnct/main/autoreboot.sh"
 wget -O bannerku "https://raw.githubusercontent.com/halluboys/xzvnct/main/bannerku"
-#wget -O v2raay "https://raw.githubusercontent.com/halluboys/xzvnct/main/v2raay.sh"
-#wget -O l2tp "https://raw.githubusercontent.com/halluboys/xzvnct/main/l2tp.sh"
-#wget -O ssh "https://raw.githubusercontent.com/halluboys/xzvnct/main/ssh.sh"
-#wget -O ssssr "https://raw.githubusercontent.com/halluboys/xzvnct/main/ssssr.sh"
-#wget -O sstpp "https://raw.githubusercontent.com/halluboys/xzvnct/main/sstpp.sh"
-#wget -O trojaan "https://raw.githubusercontent.com/halluboys/xzvnct/main/trojaan.sh"
-#wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/main/vleess.sh"
-#wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/wgr.sh"
-#wget -O add-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/add-trgo.sh"
-#wget -O xp-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/xp-trgo.sh"
+wget -O v2raay "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/v2raay.sh"
+wget -O add-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/add-trgo.sh"
+wget -O xp-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/xp-trgo.sh"
 wget -O l2tp "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/l2tp.sh"
 wget -O ssh "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/ssh.sh"
 wget -O ssssr "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/ssssr.sh"
@@ -410,7 +402,7 @@ wget -O sstpp "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/ss
 wget -O trojaan "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/trojaan.sh"
 wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/vleess.sh"
 wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/wgr.sh"
-wget -O update "https://raw.githubusercontent.com/halluboys/xzvnct/main/update.sh"
+#wget -O update "https://raw.githubusercontent.com/halluboys/xzvnct/main/update.sh"
 wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/menu.sh"
 
 chmod +x add-host
@@ -442,24 +434,13 @@ chmod +x port-ws
 chmod +x port-vless
 chmod +x wbmn
 chmod +x xp
-chmod +x update
 chmod +x bannerku
 chmod +x bbr
 chmod +x cfd
 chmod +x cff
 chmod +x cfh
-chmod +x certv2ray
 chmod +x autoreboot
-#chmod +x v2raay
-#chmod +x trojaan
-#chmod +x sstpp
-#chmod +x vleess
-#chmod +x wgr
-#chmod +x ssssr
-#chmod +x ssh
-#chmod +x l2tp
-#chmod +x add-trgo
-#chmod +x xp-trgo
+chmod +x v2raay
 chmod +x trojaan
 chmod +x sstpp
 chmod +x vleess
@@ -467,7 +448,9 @@ chmod +x wgr
 chmod +x ssssr
 chmod +x ssh
 chmod +x l2tp
-chmod +x update
+chmod +x add-trgo
+chmod +x xp-trgo
+#chmod +x update
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
