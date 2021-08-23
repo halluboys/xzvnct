@@ -49,8 +49,8 @@ chmod +x /usr/local/bin/edu-proxy
 # Installing Service
 cat > /etc/systemd/system/edu-proxy.service << END
 [Unit]
-Description=Python Edu Proxy By Radenpancal Service
-Documentation=https://vpnstores.net
+Description=Python Edu Proxy By Haluboys Service
+Documentation=https://xzvnct.my.id
 After=network.target nss-lookup.target
 
 [Service]
@@ -79,8 +79,8 @@ chmod +x /usr/local/bin/edu-proxyssl
 # Installing Service
 cat > /etc/systemd/system/edu-proxyssl.service << END
 [Unit]
-Description=Python Edu Ssl Proxy By Radenpancal Service
-Documentation=https://lestakun.tech
+Description=Python Edu Ssl Proxy By Haluboys Service
+Documentation=https://xzvnct.my.id
 After=network.target nss-lookup.target
 
 [Service]
@@ -109,8 +109,8 @@ chmod +x /usr/local/bin/edu-proxyovpn
 # Installing Service
 cat > /etc/systemd/system/edu-proxyovpn.service << END
 [Unit]
-Description=Python Edu Ovpn Proxy By Radenpancal Service
-Documentation=https://lestakun.tech
+Description=Python Edu Ovpn Proxy By Haluboys Service
+Documentation=https://xzvnct.my.id
 After=network.target nss-lookup.target
 
 [Service]
