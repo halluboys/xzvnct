@@ -35,7 +35,7 @@ cat> /etc/v2ray/config.json << END
   },
   "inbounds": [
     {
-      "port": 8443,
+      "port": 443,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -58,7 +58,7 @@ cat> /etc/v2ray/config.json << END
           ]
         },
         "wsSettings": {
-          "path": "/v2ray",
+          "path": "/xzvnct",
           "headers": {
             "Host": ""
           }
@@ -146,7 +146,7 @@ cat> /etc/v2ray/none.json << END
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/v2ray",
+          "path": "/xzvnct",
           "headers": {
             "Host": ""
           }
@@ -524,6 +524,7 @@ chmod +x xp-ws
 chmod +x xp-tr
 chmod +x xp-vless
 chmod +x certv2ray
+certv2ray
 cd
 rm -f ins-vt.sh
 mv /root/domain /etc/v2ray
