@@ -2,12 +2,6 @@
 # Trojan Go Auto Setup 
 # =========================
 
-apt update -y
-apt upgrade -y
-apt install wget -y
-apt install screen -y
-apt install curl -y
-apt install zip
 # Domain 
 domain=$(cat /etc/v2ray/domain)
 
@@ -17,50 +11,28 @@ uuid=$(cat /proc/sys/kernel/random/uuid)
 # Trojan Go Akun 
 mkdir -p /etc/trojan-go/
 touch /etc/trojan-go/akun.conf
+touch /etc/trojan-go/uuid.txt
 
 # Installing Trojan Go
 mkdir -p /etc/trojan-go/
-chmod 755 /etc/trojan-go/
+chmod 777 /etc/trojan-go/
 touch /etc/trojan-go/trojan-go.pid
-wget -O /usr/local/bin/trojan-go https://github.com/halluboys/xzvnct/raw/main/trojan-go
-wget -O /usr/local/bin/geoip.dat https://raw.githubusercontent.com/halluboys/xzvnct/main/geoip.dat
-wget -O /usr/local/bin/geosite.dat https://raw.githubusercontent.com/halluboys/xzvnct/main/geosite.dat
-chmod +x /usr/local/bin/trojan-go
-
-# Service
-cat > /etc/systemd/system/trojan-go.service << END
-[Unit]
-Description=Trojan-Go 
-Documentation=https://p4gefau1t.github.io/trojan-go/
-After=network.target nss-lookup.target
-
-[Service]
-User=root
-NoNewPrivileges=true
-ExecStart=/usr/local/bin/trojan-go -config /etc/trojan-go/config.json
-Restart=on-failure
-RestartSec=10s
-LimitNOFILE=infinity
-
-[Install]
-WantedBy=multi-user.target
-END
-
-# Config
-cat > /etc/trojan-go/config.json << END
+wget -O /etc/trojan-go/trojan-go https://github.com/bokir-tampan/ranjau-darate/raw/main/trojan-go
+wget -O /etc/trojan-go/geoip.dat https://raw.githubusercontent.com/bokir-tampan/ranjau-darate/main/geoip.dat
+wget -O /etc/trojan-go/geosite.dat https://raw.githubusercontent.com/bokir-tampan/ranjau-darate/main/geosite.dat
+chmod +x /etc/trojan-go/trojan-go
+cat <<EOF > /etc/trojan-go/config.json
 {
-  "run_type": "server",
-  "local_addr": "0.0.0.0",
-  "local_port": 2096,
-  "remote_addr": "127.0.0.1",
-  "remote_port": 81,
-  "log_level": 1,
-  "log_file": "/var/log/trojan-go.log",
-  "password": [
-    "$uuid",
-    "$uuid",
-    ""
-  ],
+    "run_type": "server",
+    "local_addr": "0.0.0.0",
+    "local_port": 2096,
+    "remote_addr": "127.0.0.1",
+    "remote_port": 81,
+    "log_level": 1,
+    "log_file": "/var/log/trojan-go.log",
+    "password": [
+        "$uuid"
+    ],
   "disable_http_check": false,
   "udp_timeout": 60,
   "ssl": {
@@ -69,24 +41,24 @@ cat > /etc/trojan-go/config.json << END
     "cert": "/etc/v2ray/v2ray.crt",
     "key": "/etc/v2ray/v2ray.key",
     "key_password": "",
-    "cipher": "",
+    "cipher": "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384:TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256:TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
     "curves": "",
-    "prefer_server_cipher": false,
+    "prefer_server_cipher": true,
     "sni": "$domain",
     "alpn": [
-      "h2"
+      "http/1.1"
     ],
     "session_ticket": true,
     "reuse_session": true,
     "plain_http_response": "",
     "fallback_addr": "127.0.0.1",
     "fallback_port": 2096,
-    "fingerprint": "firefox"
+    "fingerprint": ""
   },
   "tcp": {
     "no_delay": true,
     "keep_alive": true,
-    "prefer_ipv4": true
+    "prefer_ipv4": false
   },
   "mux": {
     "enabled": true,
@@ -94,18 +66,18 @@ cat > /etc/trojan-go/config.json << END
     "idle_timeout": 60
   },
   "router": {
-    "enabled": false,
+    "enabled": true,
     "bypass": [],
     "proxy": [],
     "block": [],
     "default_policy": "proxy",
     "domain_strategy": "as_is",
-    "geoip": "/usr/local/bin/geoip.dat",
-    "geosite": "/usr/local/bin/geosite.dat"
+    "geoip": "/etc/trojan-go/geoip.dat",
+    "geosite": "/etc/trojan-go/geosite.dat"
   },
   "websocket": {
     "enabled": true,
-    "path": "/trojango",
+    "path": "/bokir_tampan",
     "host": "$domain"
   },
   "shadowsocks": {
@@ -150,16 +122,37 @@ cat > /etc/trojan-go/config.json << END
     }
   }
 }
+EOF
+cat <<EOF > /etc/systemd/system/trojan-go.service
+[Unit]
+Description=Trojan-Go 
+Documentation=https://p4gefau1t.github.io/trojan-go/
+After=network.target nss-lookup.target
 
-END
+[Service]
+User=root
+NoNewPrivileges=true
+ExecStart=/etc/trojan-go/trojan-go -config /etc/trojan-go/config.json
+Restart=on-failure
+RestartSec=10s
+LimitNOFILE=infinity
+
+[Install]
+WantedBy=multi-user.target
+
+EOF
+
+cat <<EOF > /etc/trojan-go/uuid.txt
+$uuid
+EOF
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2096 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p udp --dport 2096 -j ACCEPT
-iptables-save > /etc/iptables.up.rules
-iptables-restore -t < /etc/iptables.up.rules
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2096 -j ACCEPT
+iptables-save >/etc/iptables.rules.v4
 netfilter-persistent save
 netfilter-persistent reload
+systemctl daemon-reload
 
 # Starting
 systemctl daemon-reload
-systemctl enable trojan-go
+systemctl enable trojan-go.service
 systemctl start trojan-go
