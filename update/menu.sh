@@ -43,12 +43,13 @@ echo -e   "   24\e[1;33m)\e[m  Cloudflare Add-Ons"
 echo -e   "   25\e[1;33m)\e[m  Pointing BUG" 
 echo -e   "   26\e[1;33m)\e[m  Clear log" 
 echo -e   "   27\e[1;33m)\e[m  Auto Reboot" 
-echo -e   "   28\e[1;33m)\e[m  Update Lates Script"
+echo -e   "   28\e[1;33m)\e[m  Check Service Running"
+echo -e   "   29\e[1;33m)\e[m  Update Lates Script"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "   x)   Exit" | lolcat
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   ""
-read -p "     Select From Options [1-28 or x] :  " menu
+read -p "     Select From Options [1-29 or x] :  " menu
 echo -e   ""
 case $menu in
 1)
@@ -133,6 +134,9 @@ clear-log
 autoreboot
 ;;
 28)
+running
+;;
+29)
 update
 ;;
 x)
