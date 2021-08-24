@@ -403,7 +403,12 @@ wget -O trojaan "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/
 wget -O vleess "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/vleess.sh"
 wget -O wgr "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/wgr.sh"
 wget -O running "https://raw.githubusercontent.com/halluboys/xzvnct/main/running.sh"
+wget -O cek-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/cek-trgo.sh"
+wget -O renew-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/renew-trgo.sh"
+wget -O port-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/port-trgo.sh"
+wget -O del-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/del-trgo.sh"
 wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/menu.sh"
+wget -O trojanGO "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/trojanGO.sh"
 
 chmod +x add-host
 chmod +x about
@@ -452,6 +457,11 @@ chmod +x l2tp
 chmod +x add-trgo
 chmod +x xp-trgo
 chmod +x running
+chmod +x cek-trgo
+chmod +x del-trgo
+chmod +x renew-trgo
+chmod +x port-trgo
+chmod +x trojanGO
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
