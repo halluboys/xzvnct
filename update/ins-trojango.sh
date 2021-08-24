@@ -77,7 +77,7 @@ cat <<EOF > /etc/trojan-go/config.json
   },
   "websocket": {
     "enabled": true,
-    "path": "/bokir_tampan",
+    "path": "/xzvnct",
     "host": "$domain"
   },
   "shadowsocks": {
