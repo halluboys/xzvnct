@@ -25,7 +25,7 @@ echo -e   "   9\e[1;33m)\e[m Panel TrojanGO"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "                             SYSTEM MENU\e[m" | lolcat 
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
-echo -e   "   10\e[1;33m)\e[m   Add Subdomain Host For VPS" 
+echo -e   "   10\e[1;33m)\e[m  Add Subdomain Host For VPS" 
 echo -e   "   11\e[1;33m)\e[m  Renew Certificate V2RAY" 
 echo -e   "   12\e[1;33m)\e[m  Change Port All Account"
 echo -e   "   13\e[1;33m)\e[m  Backup Data VPS" 
