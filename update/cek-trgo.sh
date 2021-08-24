@@ -31,6 +31,10 @@ done
 jum=$(cat /tmp/iptrojan-go.txt)
 if [[ -z "$jum" ]]; then
 echo > /dev/null
+else
+jum2=$(cat /tmp/iptrojan-go.txt | nl)
+echo "user : $akun";
+echo "$jum2";
 echo "-------------------------------"
 fi
 rm -rf /tmp/iptrojan-go.txt
