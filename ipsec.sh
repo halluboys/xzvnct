@@ -283,6 +283,7 @@ wget -O /usr/bin/add-pptp https://raw.githubusercontent.com/halluboys/xzvnct/mai
 wget -O /usr/bin/del-pptp https://raw.githubusercontent.com/halluboys/xzvnct/main/del-pptp.sh && chmod +x /usr/bin/del-pptp
 wget -O /usr/bin/renew-pptp https://raw.githubusercontent.com/halluboys/xzvnct/main/renew-pptp.sh && chmod +x /usr/bin/renew-pptp
 wget -O /usr/bin/renew-l2tp https://raw.githubusercontent.com/halluboys/xzvnct/main/renew-l2tp.sh && chmod +x /usr/bin/renew-l2tp
+dos2unix add-l2tp
 touch /var/lib/premium-script/data-user-l2tp
 touch /var/lib/premium-script/data-user-pptp
 rm -f /root/ipsec.sh
