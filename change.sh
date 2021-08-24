@@ -17,10 +17,11 @@ echo -e "     [5]  Change Port Vless"
 echo -e "     [6]  Change Port Trojan"
 echo -e "     [7]  Change Port Squid"
 echo -e "     [8]  Change Port SSTP"
+echo -e "     [9]  Change Port TrojanGO"
 echo -e "     [x]  Exit"
 echo -e "======================================"
 echo -e ""
-read -p "     Select From Options [1-8 or x] :  " port
+read -p "     Select From Options [1-9 or x] :  " port
 echo -e ""
 case $port in
 1)
@@ -46,6 +47,9 @@ port-squid
 ;;
 8)
 port-sstp
+;;
+9)
+port-trgo
 ;;
 x)
 clear
