@@ -138,4 +138,11 @@ then
 echo -e " Nginx             : Nginx Service is "$green"running"$NC""                
 else                                                                                    
 echo -e " Nginx             : Nginx Service is "$red"not running (Error)"$NC""      
+status="$(systemctl show trojan-go.service --no-page)"                                      
+status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)                     
+if [ "${status_text}" == "active" ]                                                     
+then                                                                                    
+echo -e " Trojan-Go             : Nginx Service is "$green"running"$NC""                
+else                                                                                    
+echo -e " Nginx             : Trojan-Go Service is "$red"not running (Error)"$NC""      
 fi
