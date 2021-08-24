@@ -21,13 +21,13 @@ echo -e   "   5\e[1;33m)\e[m Panel SSR & SS Account"
 echo -e   "   6\e[1;33m)\e[m Panel V2Ray" 
 echo -e   "   7\e[1;33m)\e[m Panel VLess" 
 echo -e   "   8\e[1;33m)\e[m Panel Trojan" 
+echo -e   "   9\e[1;33m)\e[m Panel TrojanGO"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "                             SYSTEM MENU\e[m" | lolcat 
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
-echo -e   "   9\e[1;33m)\e[m   Add Subdomain Host For VPS" 
-echo -e   "   10\e[1;33m)\e[m  Renew Certificate V2RAY" 
-echo -e   "   11\e[1;33m)\e[m  Change Port All Account"
-echo -e   "   12\e[1;33m)\e[m  Autobackup Data VPS" 
+echo -e   "   10\e[1;33m)\e[m   Add Subdomain Host For VPS" 
+echo -e   "   11\e[1;33m)\e[m  Renew Certificate V2RAY" 
+echo -e   "   12\e[1;33m)\e[m  Change Port All Account"
 echo -e   "   13\e[1;33m)\e[m  Backup Data VPS" 
 echo -e   "   14\e[1;33m)\e[m  Restore Data VPS" 
 echo -e   "   15\e[1;33m)\e[m  Webmin Menu" 
@@ -77,16 +77,16 @@ vleess
 trojaan
 ;;
 9)
-add-host
+trojanGO
 ;;
 10)
-certv2ray
+add-host
 ;;
 11)
-change-port
+cerv2ray
 ;;
 12)
-autobackup
+change-port
 ;;
 13)
 backup
