@@ -147,3 +147,4 @@ echo -e " Trojan-Go         : Trojan-go Service is "$green"running"$NC""
 else                                                                                    
 echo -e " Trojan-Go         : Trojan-Go Service is "$red"not running (Error)"$NC""      
 fi
+cat /usr/bin/bannerku | lolcat
