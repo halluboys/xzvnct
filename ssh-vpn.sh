@@ -132,14 +132,6 @@ systemctl restart edu-proxyovpn
 
 clear
 
-# nano /etc/bin/wstunnel
-cat > /etc/bin/wstunnel <<-END
-#!/bin/sh -e
-# wstunnel
-# By default this script does nothing
-exit 0
-END
-
 # nano /etc/rc.local
 cat > /etc/rc.local <<-END
 #!/bin/sh -e
@@ -147,9 +139,6 @@ cat > /etc/rc.local <<-END
 # By default this script does nothing.
 exit 0
 END
-
-# Ubah izin akses
-chmod +x /etc/bin/wstunnel
 
 # Ubah izin akses
 chmod +x /etc/rc.local
