@@ -3,7 +3,7 @@
 
 - `IJIN DULU BANGJAGO !`
 [`Telegram`](https://t.me/xzvnct)
-`[x]` ~~`Gak ijin VPS lu meninggoy !`~~
+- ~~`Gak ijin VPS lu meninggoy !`~~
 
 - `CARA INSTALL`
 
