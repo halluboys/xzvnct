@@ -1,4 +1,3 @@
-# MASIH ERROR LAGI DI EDIT
 # SCRIPT AUTOINSTALL PREMIUM
 [![Go Report Card](https://goreportcard.com/badge/github.com/p4gefau1t/trojan-go)](https://goreportcard.com/report/github.com/p4gefau1t/trojan-go) [![Downloads](https://img.shields.io/github/downloads/p4gefau1t/trojan-go/total?label=downloads&logo=github&style=flat-square)](https://img.shields.io/github/downloads/p4gefau1t/trojan-go/total?label=downloads&logo=github&style=flat-square) ![GoDoc](https://godoc.org/github.com/LiamHaworth/go-tproxy?status.svg)
 
