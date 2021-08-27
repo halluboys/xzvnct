@@ -158,10 +158,6 @@ apt dist-upgrade -y
 apt-get remove --purge ufw firewalld -y
 apt-get remove --purge exim4 -y
 
-# install wget and curl
-apt -y install wget curl
-apt -y install python
-
 # set time GMT +7
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
@@ -173,16 +169,6 @@ apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rs
 echo "clear" >> .profile
 echo "neofetch" >> .profile
 echo "echo by RADENPANCAL" >> .profile
-
-# install webserver
-apt -y install nginx
-cd
-rm /etc/nginx/sites-enabled/default
-rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/halluboys/px/main/nginx.conf"
-mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/halluboys/px/main/vps.conf"
-/etc/init.d/nginx restart
 
 # install badvpn
 cd
@@ -317,7 +303,6 @@ sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dr
 
 #install bbr dan optimasi kernel
 wget https://raw.githubusercontent.com/halluboys/xzvnct/main/bbr.sh && chmod +x bbr.sh && ./bbr.sh
-wget https://raw.githubusercontent.com/halluboys/xzvnct/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -335,12 +320,6 @@ iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
-
-# install python
-apt -y install ruby
-gem install lolcat
-apt -y install figlet
-apt -y install dos2unix
 
 # download script
 cd /usr/bin
@@ -397,7 +376,6 @@ wget -O renew-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/upda
 wget -O port-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/port-trgo.sh"
 wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/menu.sh"
 wget -O /usr/bin/del-trgo https://raw.githubusercontent.com/halluboys/xzvnct/main/update/del-trgo && chmod +x /usr/bin/del-trgo
-wget -O /usr/bin/trojanGO https://raw.githubusercontent.com/halluboys/xzvnct/main/update/trojanGO && chmod +x /usr/bin/trojanGO
 
 chmod +x add-host
 chmod +x about
@@ -449,7 +427,6 @@ chmod +x running
 chmod +x cek-trgo
 chmod +x renew-trgo
 chmod +x port-trgo
-dos2unix trojanGO
 dos2unix del-trgo
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
