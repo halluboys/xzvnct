@@ -3,6 +3,7 @@
 
 - `IJIN DULU BANGJAGO !`
 [`Telegram`](https://t.me/xzvnct)
+`[x]` ~~`Gak ijin VPS lu meninggoy !`~~
 
 - `CARA INSTALL`
 
@@ -33,5 +34,3 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 - V2RAY Vless None TLS    
 - Trojan
 - TrojanGo
-
-`[x]` ~~`Gak ijin VPS lu meninggoy !`~~
