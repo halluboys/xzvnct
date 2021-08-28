@@ -38,9 +38,8 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 
 
 `SERVICE MENU`
-![Screenshot_20210827-201008](https://user-images.githubusercontent.com/87511503/131220917-4245a065-4106-4c6c-bacb-f7535e31084f.png)
-
+![Screenshot_20210827-201008](https://user-images.githubusercontent.com/87511503/131221061-4ccc16ba-5fbe-4f27-8a01-966d888682e5.jpg)
 
 `SERVICE RUNNING`
-![Screenshot_20210827-225631](https://user-images.githubusercontent.com/87511503/131220849-34d051b8-bfca-4579-8c27-54d2b2509c0b.jpg)
+![Screenshot_20210827-225631](https://user-images.githubusercontent.com/87511503/131221045-ee78f854-d491-4467-8054-702d3a547d4c.jpg)
 
