@@ -37,4 +37,5 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 - TrojanGo
 
 SERVICE
-https://user-images.githubusercontent.com/87511503/131220849-34d051b8-bfca-4579-8c27-54d2b2509c0b.jpg
+![Screenshot_20210827-225631](https://user-images.githubusercontent.com/87511503/131220849-34d051b8-bfca-4579-8c27-54d2b2509c0b.jpg)
+
