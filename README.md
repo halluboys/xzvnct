@@ -35,10 +35,12 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 - V2RAY Vless None TLS    
 - Trojan
 - TrojanGo
-======================================================
-`MENU`
+
+
+`SERVICE MENU`
 ![Screenshot_20210827-201008](https://user-images.githubusercontent.com/87511503/131220917-4245a065-4106-4c6c-bacb-f7535e31084f.png)
 
-`SERVICE`
+
+`SERVICE RUNNING`
 ![Screenshot_20210827-225631](https://user-images.githubusercontent.com/87511503/131220849-34d051b8-bfca-4579-8c27-54d2b2509c0b.jpg)
 
