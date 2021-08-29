@@ -83,7 +83,7 @@ trojanGO
 add-host
 ;;
 11)
-cerv2ray
+sudo cerv2ray
 ;;
 12)
 change-port
@@ -134,7 +134,7 @@ clear-log
 autoreboot
 ;;
 28)
-running
+sudo running
 ;;
 29)
 update
