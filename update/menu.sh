@@ -83,7 +83,7 @@ trojanGO
 add-host
 ;;
 11)
-sudo cerv2ray
+sudo certv2ray
 ;;
 12)
 change-port
