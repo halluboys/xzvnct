@@ -3,7 +3,7 @@
 
 - `IJIN DULU BANGJAGO !`
 [`Telegram`](https://t.me/xzvnct)
-- `kirim IP VPS ke Telegram !`
+- `Kirim IPVPS ke Telegram !`
 - ~~`Gak ijin VPS lu meninggoy !`~~
 
 - `CARA INSTALL`
