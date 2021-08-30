@@ -8,11 +8,11 @@ clear
 trgo="$(cat ~/log-install.txt | grep -i TrojanGo | cut -d: -f2|sed 's/ //g')"
 echo -e "      Change Port $trgo"
 read -p "New Port TrojanGo: " trgo2
-if [ -z $tr2 ]; then
+if [ -z $trgo2 ]; then
 echo "Please Input Port"
 exit 0
 fi
-cek=$(netstat -nutlp | grep -w $tr2)
+cek=$(netstat -nutlp | grep -w $trgo2)
 if [[ -z $cek ]]; then
 sed -i "s/$trgo/$trgo2/g" /etc/trojan-go/config.json
 sed -i "s/   - TrojanGo                  : $trgo/   - TrojanGo                  : $trgo2/g" /root/log-install.txt
