@@ -336,6 +336,7 @@ wget -O renew-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/upda
 wget -O port-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/port-trgo.sh"
 wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/menu.sh"
 wget -O /usr/bin/del-trgo https://raw.githubusercontent.com/halluboys/xzvnct/main/update/del-trgo && chmod +x /usr/bin/del-trgo
+wget -O point "https://raw.githubusercontent.com/halluboys/xzvnct/main/pointing.sh"
 
 chmod +x add-host
 chmod +x about
@@ -388,12 +389,13 @@ chmod +x cek-trgo
 chmod +x renew-trgo
 chmod +x port-trgo
 dos2unix del-trgo
+chmod +x point
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
 cd
-echo "1" > /proc/sys/net/ipv4/ip_forward; wget -O /usr/bin/point 'https://raw.githubusercontent.com/bokir-tampan/ranjau-darate/main/pointing.sh'; chmod +x /usr/bin/point
+echo "1" > /proc/sys/net/ipv4/ip_forward; wget -O /usr/bin/point 'https://raw.githubusercontent.com/halluboys/xzvnct/main/pointing.sh'; chmod +x /usr/bin/point
 apt autoclean -y
 apt -y remove --purge unscd
 apt-get -y --purge remove samba*;
