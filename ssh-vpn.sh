@@ -1,10 +1,10 @@
 #!/bin/bash
-# By Halluboy
+#
 # ==================================================
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
-MYIP=$(wget -qO- ifconfig.me/ip);
+MYIP=$(wget -qO- icanhazip.com);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 NET=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
@@ -14,10 +14,10 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=www.xzvnct.my.id
-organizationalunit=www.xzvnct.my.id
-commonname=www.xzvnct.my.id
-email=haluboys@xzvnct.my.id
+organization=xzvnct.my.id
+organizationalunit=xzvnct.my.id
+commonname=xzvnct.my.id
+email=admin@xzvnct.my.id
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/halluboys/xzvnct/main/password"
@@ -25,6 +25,34 @@ chmod +x /etc/pam.d/common-password
 
 # go to root
 cd
+
+# Edu OVPN
+wget -q -O /usr/local/bin/edu-ovpn https://raw.githubusercontent.com/halluboys/xzvnct/main/cdn-ovpn.py
+chmod +x /usr/local/bin/edu-ovpn
+
+# Installing Service
+cat > /etc/systemd/system/edu-ovpn.service << END
+[Unit]
+Description=Python Edu Ovpn By haluboy
+Documentation=https://xzvnct.my.id
+After=network.target nss-lookup.target
+
+[Service]
+Type=simple
+User=root
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+ExecStart=/usr/bin/python -O /usr/local/bin/edu-ovpn 2082
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+END
+
+systemctl daemon-reload
+systemctl enable edu-ovpn
+systemctl restart edu-ovpn
 
 # Edit file /etc/systemd/system/rc-local.service
 cat > /etc/systemd/system/rc-local.service <<-END
@@ -41,96 +69,6 @@ SysVStartPriority=99
 [Install]
 WantedBy=multi-user.target
 END
-
-# Getting Proxy Template
-wget -q -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/halluboys/xzvnct/proxy-templated.py
-chmod +x /usr/local/bin/edu-proxy
-
-# Installing Service
-cat > /etc/systemd/system/edu-proxy.service << END
-[Unit]
-Description=Python Edu Proxy By Haluboys Service
-Documentation=https://xzvnct.my.id
-After=network.target nss-lookup.target
-
-[Service]
-Type=simple
-User=root
-CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/edu-proxy 2082
-Restart=on-failure
-
-[Install]
-WantedBy=multi-user.target
-END
-
-systemctl daemon-reload
-systemctl enable edu-proxy
-systemctl restart edu-proxy
-
-clear
-
-# Getting Proxy Template Ssl
-wget -q -O /usr/local/bin/edu-proxyssl https://raw.githubusercontent.com/halluboys/xzvnct/main/proxy-templatedssl.py
-chmod +x /usr/local/bin/edu-proxyssl
-
-# Installing Service
-cat > /etc/systemd/system/edu-proxyssl.service << END
-[Unit]
-Description=Python Edu Ssl Proxy By Haluboys Service
-Documentation=https://xzvnct.my.id
-After=network.target nss-lookup.target
-
-[Service]
-Type=simple
-User=root
-CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/edu-proxyssl
-Restart=on-failure
-
-[Install]
-WantedBy=multi-user.target
-END
-
-systemctl daemon-reload
-systemctl enable edu-proxyssl
-systemctl restart edu-proxyssl
-
-clear
-
-# Getting Proxy Template Ovpn
-wget -q -O /usr/local/bin/edu-proxyovpn https://raw.githubusercontent.com/halluboys/xzvnct/main/proxy-templatedovpn.py
-chmod +x /usr/local/bin/edu-proxyovpn
-
-# Installing Service
-cat > /etc/systemd/system/edu-proxyovpn.service << END
-[Unit]
-Description=Python Edu Ovpn Proxy By Haluboys Service
-Documentation=https://xzvnct.my.id
-After=network.target nss-lookup.target
-
-[Service]
-Type=simple
-User=root
-CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/edu-proxyovpn 2086
-Restart=on-failure
-
-[Install]
-WantedBy=multi-user.target
-END
-
-systemctl daemon-reload
-systemctl enable edu-proxyovpn
-systemctl restart edu-proxyovpn
-
-clear
 
 # nano /etc/rc.local
 cat > /etc/rc.local <<-END
@@ -168,7 +106,6 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
 echo "clear" >> .profile
 echo "neofetch" >> .profile
-echo "echo by RADENPANCAL" >> .profile
 
 # install badvpn
 cd
@@ -177,7 +114,6 @@ chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500' /etc/rc.local
-sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500' /etc/bin/wstunnel
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
@@ -189,13 +125,14 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 
 # setting port ssh
-sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 88' /etc/ssh/sshd_config
+sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
 
 # install dropbear
 apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 69"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
@@ -244,8 +181,8 @@ connect = 127.0.0.1:22
 accept = 442
 connect = 127.0.0.1:1194
 
-[wsssl]
-accept = 445
+[ws-stunnel]
+accept = 443
 connect = 700
 
 END
@@ -260,6 +197,25 @@ cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
+cd
+#install sslh
+apt-get install sslh -y
+
+#konfigurasi
+#port 443 to 77 and 777
+wget -O /etc/default/sslh "https://raw.githubusercontent.com/halluboys/xzvnct/main/sslh.conf"
+service sslh restart
+
+
+#install badvpncdn
+wget https://github.com/ambrop72/badvpn/archive/master.zip
+unzip master.zip
+cd badvpn-master
+mkdir build
+cmake .. -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1
+sudo make install
+
+END
 #OpenVPN
 wget https://raw.githubusercontent.com/halluboys/xzvnct/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
@@ -293,21 +249,12 @@ echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
-# xml parser
-cd
-apt install -y libxml-parser-perl
-
 # banner /etc/issue.net
+wget -O /etc/issue.net "https://raw.githubusercontent.com/halluboys/xzvnct/main/banner.conf"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
-#install bbr dan optimasi kernel
-wget https://raw.githubusercontent.com/halluboys/xzvnct/main/bbr.sh && chmod +x bbr.sh && ./bbr.sh
-
 # blockir torrent
-iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
-iptables -A FORWARD -m string --string "announce_peer" --algo bm -j DROP
-iptables -A FORWARD -m string --string "find_node" --algo bm -j DROP
 iptables -A FORWARD -m string --algo bm --string "BitTorrent" -j DROP
 iptables -A FORWARD -m string --algo bm --string "BitTorrent protocol" -j DROP
 iptables -A FORWARD -m string --algo bm --string "peer_id=" -j DROP
@@ -316,6 +263,19 @@ iptables -A FORWARD -m string --algo bm --string "announce.php?passkey=" -j DROP
 iptables -A FORWARD -m string --algo bm --string "torrent" -j DROP
 iptables -A FORWARD -m string --algo bm --string "announce" -j DROP
 iptables -A FORWARD -m string --algo bm --string "info_hash" -j DROP
+iptables -A FORWARD -m string --algo bm --string "/default.ida?" -j DROP
+iptables -A FORWARD -m string --algo bm --string ".exe?/c+dir" -j DROP
+iptables -A FORWARD -m string --algo bm --string ".exe?/c_tftp" -j DROP
+iptables -A FORWARD -m string --string "peer_id" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "BitTorrent" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "BitTorrent protocol" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "bittorrent-announce" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "announce.php?passkey=" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "find_node" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "info_hash" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "get_peers" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "announce" --algo kmp -j DROP
+iptables -A FORWARD -m string --string "announce_peers" --algo kmp -j DROP
 iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
@@ -433,6 +393,7 @@ echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
 cd
+echo "1" > /proc/sys/net/ipv4/ip_forward; wget -O /usr/bin/point 'https://raw.githubusercontent.com/bokir-tampan/ranjau-darate/main/pointing.sh'; chmod +x /usr/bin/point
 apt autoclean -y
 apt -y remove --purge unscd
 apt-get -y --purge remove samba*;
@@ -468,12 +429,6 @@ cd
 rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/ssh-vpn.sh
-
-apt install dnsutils jq -y
-apt-get install net-tools -y
-apt-get install tcpdump -y
-apt-get install dsniff -y
-apt install grepcidr -y
 
 # finihsing
 clear
