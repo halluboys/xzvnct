@@ -45,6 +45,7 @@ echo -e   "   26\e[1;33m)\e[m  Clear log"
 echo -e   "   27\e[1;33m)\e[m  Auto Reboot" 
 echo -e   "   28\e[1;33m)\e[m  Check Service Running"
 echo -e   "   29\e[1;33m)\e[m  Update Lates Script"
+echo -e   "   30\e[1;33m)\e[m  Pointing VPS"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m"
 echo -e   "   x)   Exit" | lolcat
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m"
@@ -138,6 +139,9 @@ sudo running
 ;;
 29)
 update
+;;
+30)
+point
 ;;
 x)
 exit
