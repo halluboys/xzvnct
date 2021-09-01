@@ -21,6 +21,7 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 - Dropbear                
 - Squid Proxy             
 - Badvpn                  
+- OHP
 - Nginx                   
 - Wireguard               
 - L2TP/IPSEC VPN          
