@@ -46,6 +46,8 @@ echo -e   "   27\e[1;33m)\e[m  Auto Reboot"
 echo -e   "   28\e[1;33m)\e[m  Check Service Running"
 echo -e   "   29\e[1;33m)\e[m  Update Lates Script"
 echo -e   "   30\e[1;33m)\e[m  Pointing VPS"
+echo -e   "   31\e[1;33m)\e[m  Cek Bandwidth VPS"
+echo -e   "   32\e[1;33m)\e[m  Wildcard"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m"
 echo -e   "   x)   Exit" | lolcat
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m"
@@ -142,6 +144,12 @@ update
 ;;
 30)
 point
+;;
+31)
+vnstat
+;;
+32)
+wget https://raw.githubusercontent.com/halluboys/px/main/wildcard.sh; chmod +x wildcard.sh; ./wildcard.sh; rm -f wildcard.sh
 ;;
 x)
 exit
