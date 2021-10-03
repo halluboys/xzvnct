@@ -182,8 +182,8 @@ accept = 442
 connect = 127.0.0.1:1194
 
 [ws-stunnel]
-accept = 443
-connect = 700
+accept = 2053
+connect = 443
 
 END
 
