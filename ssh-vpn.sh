@@ -389,6 +389,7 @@ chmod +x cek-trgo
 chmod +x renew-trgo
 chmod +x port-trgo
 dos2unix del-trgo
+dos2unix add-trgo
 chmod +x point
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
