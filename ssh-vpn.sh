@@ -337,6 +337,7 @@ wget -O port-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/updat
 wget -O menu "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/menu.sh"
 wget -O /usr/bin/del-trgo https://raw.githubusercontent.com/halluboys/xzvnct/main/update/del-trgo && chmod +x /usr/bin/del-trgo
 wget -O point "https://raw.githubusercontent.com/halluboys/xzvnct/main/pointing.sh"
+wget -O /usr/bin/trojanGO https://raw.githubusercontent.com/halluboys/xzvnct/main/update/trojanGO && chmod +x /usr/bin/trojanGO
 
 chmod +x add-host
 chmod +x about
@@ -390,6 +391,7 @@ chmod +x renew-trgo
 chmod +x port-trgo
 dos2unix del-trgo
 dos2unix add-trgo
+dos2unix trojanGO 
 chmod +x point
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
